@@ -17,4 +17,4 @@ console.log(nome, sobrenome, 'tem', idade, 'anos, pesa', peso+'kg, tem', alturaE
 console.log(nome, sobrenome, 'nasceu em', anoDeNascimento); 
 
 // Uma forma de evitar usar vírgula para separar ou espaçar variáveis ou constantes é utilizando a crase para toda a string do console e para sinlaizar o que é uma letORconst usa-se ${letORconst} EX: 
-console.log(`Olá meu nome é ${nome} e eu tenho ${idade} anos`) 
+console.log(`Olá meu nome é ${nome} e eu tenho ${idade} anos`);
