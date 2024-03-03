@@ -16,5 +16,9 @@ num2 = Number(num2);
 const resultado = num1+num2;
 
 alert(`O resultado da soma entre os números selecionados é ${resultado}`);
+/* 
+OBSERVAÇÃO:
+Não é necessário a criação de uma const-resultado nesse tipo de circunstância, as expressões matemáticas podem ser colocadas direto no ${x1+x2} dentro das crases. 
+*/ 
 
 
