@@ -19,6 +19,13 @@ varC = varD
 console.log(varA, varB, varC);
 
 /* correção:
-Uma forma fácil de mudar os valores sem carecer de uma nova var, seria utilizando [varA, varB, varC] = [varB, varC, varA]
+Uma forma fácil de mudar os valores sem carecer de uma nova var, seria utilizando [var1, var2, var3] = [var2, var3, var1]
 EX:
 */
+let var1 = "1";
+let var2 = "2";
+let var3 = "3";
+
+[var1, var2, var3] = [var2, var3, var1]
+
+console.log(var1, var2, var3);
