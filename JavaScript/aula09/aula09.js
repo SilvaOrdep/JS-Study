@@ -31,5 +31,5 @@ console.log(umaString.match(/[a-z]/g)) para ver todas as letras minúsculas por 
 MAS no caso acima seria necessário um conhecimento mais vasto sobre EXPRESSÕES REGULARES, a flag (g) serve para dizer que é na string inteira e não apenas no primeiro elemento que seja uma letra minuscula por exemplo.
 */
 console.log(umaString.match(/[a-z]/g), "comando para identificar todas as letras minúsculas sem acento")
-// teste
+
 
