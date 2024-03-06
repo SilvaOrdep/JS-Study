@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercícios aula 09</title>
+  </head>
+  <body>
+    <script>
+      const nome = prompt("Digite seu nome completo:");
+      let numLetras = nome.length;
+      let secondLetra = nome[1];
+      let primeiroIndLetra = nome.indexOf('e');
+      let segundoIndLetra = nome.lastIndexOf('e');
+      let ultimas3 = nome.slice(-3);
+      let palavrasOfName = nome.split(' '); 
+      let nomeparaupper = nome.toLocaleUpperCase();
+      let nomeplower = nome.toLowerCase();
+      document.body.innerHTML += `Seu nome é: ${nome}<br />`;
+      document.body.innerHTML += `Seu nome tem ${numLetras} letras <br />`;
+      document.body.innerHTML += `A segunda letra do seu nome é: ${secondLetra} <br />`;
+      document.body.innerHTML += `Qual o primeiro índice da letra E no seu nome? ${primeiroIndLetra} <br />`;
+      document.body.innerHTML += `Qual o último índice da letra E no seu nome? ${segundoIndLetra} <br />`;
+      document.body.innerHTML += `As últimas 3 letras do seu nome são: ${ultimas3} <br />`;
+      document.body.innerHTML += `As palavras do seu nome são: ${palavrasOfName} <br />`;
+      document.body.innerHTML += `Seu nome com letras maiúsculas: ${nomeparaupper} <br />`;
+      document.body.innerHTML += `Seu nome com letras minúsculas: ${nomeplower} <br />`;
+    </script>
+  </body>
+</html>
