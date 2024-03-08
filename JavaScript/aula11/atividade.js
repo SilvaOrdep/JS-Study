@@ -4,14 +4,14 @@ const textNumber = document.getElementById('texto');
 
 titleNumber.innerHTML = userNumber;
 
-textNumber.innerHTML = `
-<p>Raiz quadrada: ${userNumber**0.5}<p/>
-<p>${userNumber} É inteiro: ${Number.isInteger(userNumber)} <p/>
-<p>É NaN: ${Number.isNaN(userNumber)} <p/>
-<p>Arredondando para baixo: ${Math.floor(userNumber)} <p/>
-<p>Arredondando para cima: ${Math.ceil(userNumber)}<p/>
-<p>Com duas casas decimais: ${userNumber.toFixed(2)} <p/>
-`
+textNumber.innerHTML = "";
+textNumber.innerHTML += `<p>Raiz quadrada: ${userNumber**0.5} <p/>`;
+textNumber.innerHTML += `<p>${userNumber} É inteiro: ${Number.isInteger(userNumber)} <p/>`;
+textNumber.innerHTML += `<p>É NaN: ${Number.isNaN(userNumber)} <p/>`;
+textNumber.innerHTML += `<p>Arredondando para baixo: ${Math.floor(userNumber)} <p/>`;
+textNumber.innerHTML += `<p>Arredondando para cima: ${Math.ceil(userNumber)} <p/>`;
+textNumber.innerHTML += `<p>Com duas casas decimais: ${userNumber.toFixed(2)} <p/>`;
+
 
 
 
