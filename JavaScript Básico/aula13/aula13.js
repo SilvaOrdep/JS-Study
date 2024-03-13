@@ -11,7 +11,7 @@ function name() {
 function saudacao(nome) {
   return `Bom dia ${nome}`;
 }
-const variavel = saudacao('Luiz'); // utilizando "return" na função, é possível atribuir valor a uma variável.
+let variavel = saudacao('Pedro'); // utilizando "return" na função, é possível atribuir valor a uma variável.
 console.log(variavel);
 
 /* 
