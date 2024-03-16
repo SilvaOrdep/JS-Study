@@ -34,7 +34,7 @@ console.log(realGanho);
 console.log(realPerdido);
 
 // Concatenação de strings e var's;
-let animalfavorito = 'Gato';
+let animalfavorito = 'Macaco';
 console.log('Meu animal favorito: ' + animalfavorito);
 
 // Template literal:
