@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 :root {
-  --primary-color: rgb(56, 56, 74);
-  --primary-color-darker: rgb(36, 28, 44);
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
 }
 
 * {
@@ -13,22 +13,20 @@ body {
   margin: 0;
   padding: 0;
   background: var(--primary-color);
-  font-family: "Open sans", sans-serif;
+  font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
 }
 
 .container {
   max-width: 640px;
-  margin: 30px auto;
+  margin: 50px auto;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
 }
 
-form input,
-form label,
-form button {
+form input, form label, form button {
   display: block;
   width: 100%;
   margin-bottom: 10px;
@@ -59,29 +57,11 @@ form button:hover {
   background: var(--primary-color-darker);
 }
 
-.IMC {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.paragrafo-resultado, .bad {
+  background: rgb(109, 255, 182);
+  padding: 10px 20px;
 }
 
-section p,
-section h3 {
-  margin: 0;
-  padding: 0;
-}
-
-.invalido {
-  width: auto;
-  margin-top: 20px;
-  padding: 2%;
-  background-color: rgb(167, 95, 95);
-  border-radius: 2%;
-}
-
-.resultadoIMC {
-  width: auto;
-  margin-top: 20px;
-  padding: 2%;
-  background-color: rgb(87, 203, 108);
-  border-radius: 2%;
+.bad {
+  background: rgb(255, 150, 150);
 }
