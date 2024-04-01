@@ -25,5 +25,5 @@ for (let c = 0; c <= 10; c++) {
 const frutas = ['maçã', 'banana', 'uva', 'melancia'];
 
 for (let f = 0; f < frutas.length; f++) {
-  console.log(`Índice ${f}`, frutas[f]);    
+  console.log(`Índice ${f}`, frutas[f]);
 }
