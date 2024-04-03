@@ -1,6 +1,6 @@
 // Aula de For In
 // com arrays:
-const cor = ['azul', 'verde', 'branco', 'negralha'];
+const cor = ['azul', 'verde', 'branco'];
 
 for (let i in cor) {
   console.log(i);
