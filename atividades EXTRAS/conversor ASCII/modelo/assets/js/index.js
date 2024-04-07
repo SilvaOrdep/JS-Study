@@ -34,4 +34,4 @@ function escopoPrincipal() {
 }
 escopoPrincipal();
 
-// Missão principal = fazer o caminho de volta, minha ideia é fazer uma condição onde se o usurario digiar o result de imprimirValores() no input de ASCII ele vai retornar o valor string do input de string, não vai fazer necessáriamente uma conversão e sim uam gambiarra, MAS é o caminho de volta 
+// Missão principal = fazer o caminho de volta, minha ideia é fazer uma condição onde se o usurario digiar o result de imprimirValores() no input de ASCII ele vai retornar o valor string do input de string, não vai fazer necessáriamente uma conversão e sim uam gambiarra, MAS é o caminho de volta, OBS: o input de ascii tá reservado e sem uso na const "asciiHtmlInput" acima.
