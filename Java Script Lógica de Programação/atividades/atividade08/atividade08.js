@@ -22,3 +22,17 @@ function divisivel(n) {
   }
 }
 console.log(divisivel(15));
+
+// Outra versão :
+function fizzBuzz(num) {
+  if (typeof num !== "number") return num;
+  if (num % 3 === 0 && num % 5 == 0) return "FizzBuzz";
+  if (num % 5 === 0) return "Buzz";
+  if (num % 3 === 0) return "Fizz";
+  return num;
+}
+
+console.log(fizzBuzz("a"))
+for (let i = 0; i <= 100; i++) {
+  console.log(i, fizzBuzz(i));
+}
