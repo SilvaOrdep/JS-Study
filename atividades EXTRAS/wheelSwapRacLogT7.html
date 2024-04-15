@@ -1,0 +1,284 @@
+<!-- aviso importante: no periodo atual (ano 2024 mar.) eu(Pedro) não tenho total dominio sobre as linguagens de marcação html5 e css3, tenho mais costume com javascript que estou estudando com mais frequencia e a pouco tempo, portanto será normal ver erros e coisas desnecessárias pois não tenho conhecimento vasto para otimizar o código. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/256/5019/5019514.png"
+      type="image/x-icon"
+    />
+    <title>WheelSwap</title>
+
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      button {
+        background-color: rgb(207, 210, 255);
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      button:hover {
+        transition: all 250ms ease-in-out;
+        background-color: rgba(56, 76, 105, 0.5);
+      }
+      body {
+        background: linear-gradient(
+          90deg,
+          rgb(53, 68, 207) 0%,
+          rgb(14, 16, 121) 100%
+        );
+        font-family: "Apple SD Gothic Neo", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .texto {
+        text-align: center;
+        font-size: 90px;
+        color: white;
+      }
+      body div img {
+        width: 150px;
+      }
+      .secMain {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .mainPage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .premissas {
+        font-size: 25px;
+      }
+      .naoDiv {
+        font-size: 25px;
+      }
+      .mainPage.questionDiv {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .creator {
+        position: fixed;
+        margin: 4px;
+        bottom: 0;
+        left: 0;
+      }
+      .creator a {
+        text-decoration: none;
+        color: rgb(112, 57, 20);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainPage">
+      <div class="secMain">
+        <img
+          class="logo"
+          src="https://th.bing.com/th/id/OIP.5mjGu-rW2CaxpSIOaWdOJwAAAA?rs=1&pid=ImgDetMain"
+          alt="cadeirante"
+        />
+        <h1 class="texto">Ucsal</h1>
+      </div>
+
+      <button onclick="continuar()">Longin</button>
+    </div>
+    <div class="naoDiv"></div>
+    <div class="creator">
+      Alpha v0.1 Made by
+      <a href="https://github.com/SilvaOrdep" target="_blank">Ordep</a>
+    </div>
+    <script>
+      const mainDiv = document.querySelector(".mainPage");
+      const naoDiv = document.querySelector(".naoDiv");
+
+      let questionBank = [
+        {
+          question: "1 - Encontrou?",
+          respostas: [
+            { op: "Sim" },
+            { op: "Não", nMsg: `<p class"nMsg">vai procurar uma` },
+          ],
+          premissas: `o pneu do seu avião furou/explodiu/morreu </br>
+          você deve troca-lo </br>
+          procure uma roda/pneu reserva`,
+        },
+        {
+          question: "2 - Você tem as ferramentas necessárias?",
+          respostas: [
+            { op: "Sim" },
+            {
+              op: "Não",
+              nMsg: `<p class"nMsg">ta de brincadeira né, vai comprar`,
+            },
+          ],
+          premissas: ``,
+        },
+        {
+          question: "3 - Agora tire a roda",
+          respostas: [
+            { op: "ok" },
+            {
+              op: "não",
+              nMsg: `<p class"nMsg">Então fique sem pilotar o avião`,
+            },
+          ],
+          premissas: `Levante o avião com o macaco hidráulico`,
+        },
+        {
+          question: "4 - coloque a nova roda",
+          respostas: [
+            { op: "ok" },
+            {
+              op: "não",
+              nMsg: `<p class"nMsg">então para que tirou a roda, maluco`,
+            },
+          ],
+          premissas: ``,
+        },
+        {
+          question: "5 - Desça o avião e guarde o pneu e as ferrametas",
+          respostas: [
+            { op: "ok" },
+            {
+              op: "não",
+              nMsg: `<p class"nMsg">Seja mais organizado e arrume os materiais de trabalho`,
+            },
+          ],
+          premissas: ``,
+        },
+        {
+          question: "1 - Você tem uma roda extra?",
+          respostas: [
+            { op: "Sim" },
+            {
+              op: "Não",
+              nMsg: `<p class"nMsg">Então arrume, dinheiro você tem. Tem um carro! e tome cuidado com o Serasa rsrs.`,
+            },
+          ],
+          premissas: ``,
+        },
+        {
+          question: "2 - Você quer trocar o pneu?",
+          respostas: [
+            { op: "Sim" },
+            {
+              op: "Não",
+              nMsg: `<p class"nMsg">O pneu precisa ser trocado, você ainda precisa do carro`,
+            },
+          ],
+          premissas: ``,
+        },
+        {
+          question: "3 - Você tem um macaco?",
+          respostas: [
+            { op: "Sim" },
+            {
+              op: "Não",
+              nMsg: `<p class"nMsg">Ligue para um mecânico, sem um macaco, não da pra trocar.`,
+            },
+          ],
+          premissas: `Premissa: *Você tem um pneu no Step`,
+        },
+        {
+          question: "4 - Você tem as ferramentas para remover os pinos?",
+          respostas: [
+            { op: "Sim" },
+            { op: "Não", nMsg: `<p class"nMsg">Chama o mecânico, vai logo!` },
+          ],
+          premissas: ``,
+        },
+        {
+          question: `5 - Vai deixar a roda velha aqui?`,
+          respostas: [
+            { op: "Não", sMsg: "O planeta terra agradece." },
+            {
+              op: "Sim",
+              nMsg: `<p class"nMsg">Não pensa nas gerações futuras? Porco.`,
+            },
+          ],
+          premissas: `Ações:</br>
+            *Use o macaco para levantar o carro </br>
+            *Use as ferramentas para remover os pinos </br>
+            *Remova o pneu antigo </br>
+            *coloque o pneu novo </br>
+            *faça o processo inverso de tirar o pneu </br>`,
+        },
+      ];
+
+      let qstAtualIndex = 0;
+      let qstsAtual = [];
+
+      function continuar() {
+        const caminho = `<div> <h1>Escolha um caminho</h1> <button onclick="historias(0)">Carro</button> <button onclick="historias(1)">Avião</button> </div>`;
+        mainDiv.innerHTML = caminho;
+      }
+
+      function historias(caminho) {
+        if (caminho == 0) {
+          qstsAtual = questionBank.slice(5, 10);
+          mostrarQst();
+        }
+        if (caminho == 1) {
+          qstsAtual = questionBank.slice(0, 5);
+          mostrarQst();
+        }
+      }
+
+      function mostrarQst() {
+        if (qstAtualIndex < qstsAtual.length) {
+          const questionAt = qstsAtual[qstAtualIndex];
+          const questionHTML = `
+      <div class="questionDiv">
+        <p class="premissas">${questionAt.premissas}</p>
+        <h1 class="questions">${questionAt.question}</h1>
+        <button onclick="responder(0)">${questionAt.respostas[0].op}</button>
+        <button onclick="responder(1)">${questionAt.respostas[1].op}</button>
+      </div>`;
+          mainDiv.innerHTML = questionHTML;
+        } else {
+          mainDiv.innerHTML = `<h1>Parabéns, você trocou uma roda.</h1><img style="width: 800px;" src="https://userstyles.org/style_screenshots/266096_after.gif?r=1687707680" alt="okSiiiuu"><button onclick="location.reload()">Reiniciar</button>`;
+        }
+      }
+      function responder(respostaIndex) {
+        if (respostaIndex === 1) {
+          const questionAt = qstsAtual[qstAtualIndex];
+          const naoMsg = questionAt.respostas[1].nMsg;
+          naoDiv.innerHTML = `<p>${naoMsg}</p>`;
+        } else {
+          naoDiv.innerHTML = "";
+          qstAtualIndex++;
+        }
+
+        mostrarQst();
+      }
+    </script>
+    <!-- 
+     ██████  ██████  ██████  ███████ ██████  
+    ██    ██ ██   ██ ██   ██ ██      ██   ██ 
+    ██    ██ ██████  ██   ██ █████   ██████  
+    ██    ██ ██   ██ ██   ██ ██      ██      
+     ██████  ██   ██ ██████  ███████ ██      
+-->
+  </body>
+</html>
