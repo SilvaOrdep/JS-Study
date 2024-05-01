@@ -20,7 +20,7 @@ O conteúdo deste repositório inclui:
 - Objetos e Prototipagem
 - Arrays e Iteração
 - Manipulação do DOM
-- ... (+ ao decorrer do tempo, repositório constantemente atualizado e incrementado)
+- .... (+ ao decorrer do tempo, repositório constantemente atualizado e incrementado)
 
 ---
 
